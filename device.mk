@@ -137,10 +137,6 @@ PRODUCT_PACKAGES += \
     android.hidl.base@1.0
 
 PRODUCT_PACKAGES += \
-    vendor.display.config@1.10 \
-    libdisplayconfig \
-    libqdMetaData \
-    libqdMetaData.system \
     vendor.nxp.nxpese@1.0 \
     vendor.nxp.nxpnfc@1.0 \
     vendor.oneplus.camera.CameraHIDL@1.0 \
@@ -237,3 +233,4 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
 include device/oneplus/oneplus6/keylayout/keylayout.mk
+include vendor/qcom/opensource/display-commonsys-intf/config/display-product-system.mk
