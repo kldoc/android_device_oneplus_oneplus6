@@ -20,7 +20,6 @@
 #
 
 BOARD_PATH := device/oneplus/oneplus6
-include $(BOARD_PATH)/BoardConfigGsi.mk
 
 #TARGET_USE_SDCLANG:= true
 PRODUCT_FULL_TREBLE := false
@@ -172,7 +171,7 @@ AUDIO_FEATURE_ENABLED_SND_MONITOR := false
 BOARD_USES_ALSA_AUDIO := true
 BOARD_USES_GENERIC_AUDIO := true
 TARGET_USES_QCOM_MM_AUDIO := true
-USE_CUSTOM_AUDIO_POLICY := 1
+USE_CUSTOM_AUDIO_POLICY := 0
 
 #effects
 TARGET_SYSTEM_AUDIO_EFFECTS := true
@@ -250,17 +249,11 @@ BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 # selinux
 #include device/qcom/sepolicy/sepolicy.mk
 include vendor/omni/sepolicy/sepolicy.mk
+include device/qcom/sepolicy/SEPolicy.mk
 #BOARD_SEPOLICY_DIRS += $(BOARD_PATH)/sepolicy/qcom
 BOARD_SEPOLICY_DIRS += build/target/board/generic_arm64_ab/sepolicy
 BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(BOARD_PATH)/sepolicy/public
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(BOARD_PATH)/sepolicy/private
-BOARD_PLAT_PUBLIC_SEPOLICY_DIR += \
-    device/qcom/sepolicy/generic/public \
-    device/qcom/sepolicy/qva/public
-
-BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
-    device/qcom/sepolicy/generic/private \
-    device/qcom/sepolicy/qva/private
 
 BOARD_SECCOMP_POLICY += $(BOARD_PATH)/seccomp_policy
 
