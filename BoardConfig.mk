@@ -20,6 +20,7 @@
 #
 
 BOARD_PATH := device/oneplus/oneplus6
+include $(BOARD_PATH)/BoardConfigGsi.mk
 
 #TARGET_USE_SDCLANG:= true
 PRODUCT_FULL_TREBLE := false
@@ -116,6 +117,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := false
 TARGET_USERIMAGES_SPARSE_EXT_DISABLED := false
 TARGET_USES_MKE2FS := true
+TARGET_OUT_SYSTEM_EXT := system/system_ext
 
 # Generic AOSP image always requires separate vendor.img
 TARGET_COPY_OUT_VENDOR := vendor
