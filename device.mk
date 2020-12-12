@@ -171,8 +171,8 @@ PRODUCT_PACKAGES += \
 #PRODUCT_EXTRA_VNDK_VERSIONS := 28
 
 # TODO(b/78308559): includes vr_hwc into GSI before vr_hwc move to vendor
-PRODUCT_PACKAGES += \
-    vr_hwc
+#PRODUCT_PACKAGES += \
+#    vr_hwc
 
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/media_codecs_google_audio.xml \

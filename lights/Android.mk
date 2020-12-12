@@ -14,14 +14,16 @@ LOCAL_SRC_FILES := \
     Light.cpp
 
 LOCAL_SHARED_LIBRARIES := \
-    libbase \
     libhardware \
     libhidlbase \
     libhidltransport \
     liblog \
     libhwbinder \
-    libutils \
     android.hardware.light@2.0
+
+LOCAL_STATIC_LIBRARIES := \
+    libbase \
+    libutils
 
 include $(BUILD_EXECUTABLE)
 
